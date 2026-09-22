@@ -1,0 +1,8 @@
+name: dev-tools
+version: "1.0.0"
+description: Безопасные инструменты анализа Python-проекта для учебной работы
+provides_tools:
+  - git_diff
+  - grep_search
+  - run_linter
+python_runtime: external
