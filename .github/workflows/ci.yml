@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: hermes-multiagent
+
+    steps:
+      - name: Получить исходный код
+        uses: actions/checkout@v7
+
+      - name: Настроить Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Запустить тесты CI-практики
+        run: python -m unittest discover -s ci_lab/tests -v
