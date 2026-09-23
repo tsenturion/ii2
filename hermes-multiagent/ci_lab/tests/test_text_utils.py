@@ -13,7 +13,7 @@ class TextUtilsTests(unittest.TestCase):
     def test_internal_spaces_are_replaced_with_underscore(self):
         self.assertEqual(
             normalize_username("  Alice Smith  "),
-            "alice-smith",
+            "alice_smith",
         )
 
     def test_whitespace_groups_do_not_create_repeated_underscores(self):
