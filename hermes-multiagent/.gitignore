@@ -4,6 +4,7 @@ __pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
+/final_debug_lab/logs/*.log
 /rag/index/
 /rag/logs/
 AGENTS.md
