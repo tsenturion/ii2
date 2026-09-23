@@ -1,7 +1,7 @@
 def find_user_by_email(connection, email: str):
     cursor = connection.cursor()
-    query = f"SELECT id, email, role FROM users WHERE email = '{email}'"
-    cursor.execute(query)
+    query = "SELECT id, email, role FROM users WHERE email = %s"
+    cursor.execute(query, (email,))
     return cursor.fetchone()
 
 
