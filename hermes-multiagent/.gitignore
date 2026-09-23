@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 /rag/index/
 /rag/logs/
+AGENTS.md
+TASK.md
+.env.local
